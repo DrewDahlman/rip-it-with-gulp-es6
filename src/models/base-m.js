@@ -4,6 +4,9 @@ Copyright (c) YEAR Name. All Rights Reserved.
 
 */
 
+// data
+let AppData = require('../data/data');
+
 class BaseM {
 
   /*
@@ -15,10 +18,25 @@ class BaseM {
   | Construct.
   ------------------------------------------ */
   constructor(data) {
-    this._$e = null;
-    this.$e = data.$e;
+    // app data
+    this.app_data = AppData;
 
+    // internals for get / set
+    this._$e = null;
     this._$v = null;
+
+    // set passed data
+    this.$e = data.$e;
+  }
+
+  /*
+  ------------------------------------------
+  | parse:void
+  |
+  | Parse relevent app data.
+  ------------------------------------------ */
+  parse() {
+
   }
 
   /*

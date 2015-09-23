@@ -5,11 +5,6 @@ Copyright (c) YEAR Name. All Rights Reserved.
 */
 
 // Dependencies
-
-// data
-let Data = require('../data/data');
-
-// base
 let BaseM = require('./base-m');
 
 class ExampleM extends BaseM {
@@ -25,6 +20,10 @@ class ExampleM extends BaseM {
   constructor(data) {
     super(data);
 
+    // internals for get / set
+    this._example = null;
+
+    // parse app data
     this.parse();
   }
 
@@ -35,8 +34,10 @@ class ExampleM extends BaseM {
   | Parse sync data.
   ------------------------------------------ */
   parse() {
-    this._example = null;
-    this.example = Data.example;
+    super.parse();
+
+    // example
+    this.example = this.app_data.example;
   }
 
   /*
