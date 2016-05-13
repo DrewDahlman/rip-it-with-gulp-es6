@@ -1,7 +1,7 @@
 var path = require("path");
 
-// Filters out non .coffee and .js files. Prevents
+// Filters out non .js files. Prevents
 // accidental inclusion of possible hidden files
 module.exports = function(name) {
-    return /(\.(js|coffee)$)/i.test(path.extname(name));
+  return /(\.(js)$)/i.test(path.extname(name));
 };
