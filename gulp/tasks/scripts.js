@@ -1,9 +1,9 @@
 /*
-  ___         _      _      
+  ___         _      _
  / __| __ _ _(_)_ __| |_ ___
  \__ \/ _| '_| | '_ \  _(_-<
  |___/\__|_| |_| .__/\__/__/
-               |_|          
+               |_|
 
  Compile all ES6 in the ./src directory, bundle it and save a
  non-minified version for the local webserver to ./public/js.
@@ -22,7 +22,7 @@ gulp.task('scripts', function() {
   return browserify({
       'entries': ['./src/app.js'],
       'extensions': ['.js'],
-      'transform': [babelify]
+      'transform': [['babelify', {'presets': ['es2015']}]]
     })
     .bundle()
     .on('error', handleErrors)

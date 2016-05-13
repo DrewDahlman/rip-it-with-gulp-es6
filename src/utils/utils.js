@@ -55,7 +55,7 @@ class Utils {
   | Do some user agent testing for mobile.
   ------------------------------------------ */
   static get mobile() {
-    return ((/Android/i).test(navigator.userAgent) || (/BlackBerry/i).test(navigator.userAgent) || (/iPhone|iPad|iPod/i).test(navigator.userAgent) || (/Opera Mini/i).test(navigator.userAgent) || (/IEMobile/i).test(navigator.userAgent))
+    return ((/Android/i).test(navigator.userAgent) || (/BlackBerry/i).test(navigator.userAgent) || (/iPhone|iPad|iPod/i).test(navigator.userAgent) || (/Opera Mini/i).test(navigator.userAgent) || (/IEMobile/i).test(navigator.userAgent));
   }
 }
 

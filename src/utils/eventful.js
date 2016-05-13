@@ -147,7 +147,7 @@ class Eventful {
     data.ev_type = type;
 
     // execute callbacks
-    this._events[type].map((cb, i) => {
+    this._events[type].forEach((cb, i) => {
       cb.call(this, data);
     });
 
