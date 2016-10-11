@@ -20,7 +20,7 @@ var browserify = require('browserify'),
 
 gulp.task('scripts', function() {
   return browserify({
-      'entries': ['./src/js/app.js'],
+      'entries': ['./src/app.js'],
       'extensions': ['.js'],
       'transform': [['babelify', {'presets': ['es2015']}]]
     })
